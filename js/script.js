@@ -19,17 +19,31 @@ Come abbiamo visto puoi  usare varie tecniche (style , className, classList)*/
 //3 prendere numeri multipli di 5, dare un nome
 //4 prendere numeri multipli sia di 3 che di 5, dare un nome
 
+//recupero elemento in pagina
+//associo box alla moltiplicazione
+
 console.log('JS OK')
+
+const element = document.querySelector('.boxes');
+
+let listItems = '';
+
 
 for (let i = 1; i <= 100 ; i++){
     console.log(i)
     if (i % 3 === 0 && i % 5 === 0){
-        console.log('FizzBuzz');
+        listItems += `<li> FizzBuzz ${i} </li>`;
     } else if (i % 3 === 0){
-        console.log('Fizz');
+        listItems += `<li> Fizz ${i} </li>`;
     } else if (i % 5 === 0){
-        console.log('Buzz');
+        listItems += `<li> Buzz ${i} </li>`;
+    } else if (i){
+        listItems += `<li> ${i} </li>`;
     }
 }
+
+element.innerHTML = listItems;
+
+
 
 
